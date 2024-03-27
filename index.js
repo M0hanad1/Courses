@@ -8,7 +8,6 @@ import usersRouter from "./routes/users.route.js";
 
 config();
 
-const hostname = process.env.HOSTNAME || "localhost";
 const port = process.env.PORT || 5000;
 const dbUrl = process.env.DBURL;
 
@@ -38,6 +37,6 @@ app.use((error, req, res, next) => {
   next();
 });
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
   console.log(`Listening to http://${hostname}:${port}`);
 });
